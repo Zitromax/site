@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Генетический</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Главная</a></li>
+        <!--
+      -->
+        <li><a href="AlgA.html">Алгоритм А*</a></li>
+        <!--
+      -->
+        <li><a href="AlgGen.html">Генетический алгоритм</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <button id="start">Найти путь</button>
+      <button id="stop">Остановить поиск</button>
+      <p id="reference">Поставьте точки</p>
+      <p>Размер популяции</p>
+      <input id="populationSize" value="10" type="range" min="2" max="100">
+      <p id="populationSizeLabel">10</p>
+      <p>Количество поколений</p>
+      <input id="generationsNumber" value="25" step="10" type="range" min="10" max="500">
+      <p id="generationsNumberLabel">25</p>
+      <p>Шанс мутации</p>
+      <input id="mutationChance" value="15" type="range" min="0" max="100">
+      <p id="mutationChanceLabel">15</p>
+      <input id="delay" value="150" type="range" min="0" max="300" step="50">
+      <p id="delayLabel">150</p>
+      <button id="eraseWay">Стереть путь</button>
+      <button id="clean">Отчистить плоскость</button>
+    </div>
+
+    <canvas id="flat"></canvas>
+
+    <script src="/js/Genetic/points.js"></script>
+    <script src="/js/Genetic/drawLines.js"></script>
+    <script src="/js/Genetic/buttons.js"></script>
+
+    <script src="/js/algorithms/Genetic.js"></script>
+  </body>
+</html>
