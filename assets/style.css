@@ -46,17 +46,18 @@ q:before, q:after {
 
 
 
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
 body {
     background-image: url('../background.jpg');
 	font-family: "Ubuntu Mono";
 }
+
+html.is-changing .transition-fade {
+	transition: opacity 0.25s;
+	opacity: 1;
+  }
+  html.is-animating .transition-fade {
+	opacity: 0;
+  }
 
 #flat {
 	border: 2px solid black;
@@ -67,7 +68,7 @@ nav {
 font-size: 23px;
 }
 
-nav ul.nav-list {
+.nav-list {
 	display: flex;
 	justify-content: center;
 
@@ -75,7 +76,8 @@ nav ul.nav-list {
 }
 
 
-nav ul li{
+li{
+	color:#a34021;
 	margin: 10px;
 }
 
@@ -88,7 +90,7 @@ nav ul li{
   }
 
 .cols {
-	width:320px;
+	width:400px;
     margin: auto;
 }
 
@@ -114,11 +116,14 @@ nav ul li{
 	margin-top: 5%;
 } 
 
-  table {
-	float: right;
-	margin-right: 13%;
-  }
   
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: right;
+	margin-right: 17%;
+}
+
 
   .canvas {
 	width: 500px;
@@ -136,15 +141,95 @@ img {
 }
 
 
+
 .buttons-A {
 	float: left;
-	margin-left: 18%;
+	margin-left: 13%;
 } 
 
 button {
-	margin: 5px;
+
+	margin: 10px 5px;
+	font-size: 15px;
+	background: rgba(0,0,0,0);
+
+	border-radius: 5px;
+	color: #453621;
+	cursor: pointer;
+	text-transform: uppercase;
+
+	border: 1px solid #453621;
+	padding: 5px 15px;
+}
+
+.numCells{
+
+	width: 45px;
+	font-size: 15px;
+	background: rgba(0,0,0,0);
+
+	border-radius: 5px;
+	color: #453621;
+
+	border: 1px solid #453621;
+}
+
+
+   button:hover {
+	   background: #453621;
+	   color: black;
+   }
+
+
+.range {
+	width: 100px;
+	border: 2px solid #453621;
+	border-radius: 5px;
+
+	appearance: none;
+	background: transparent;
+	
+	cursor: pointer;
+
+}
+
+.range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+
+	width: 15px;
+	height: 15px;
+
+	border-radius: 50%;
+
+	background-color: #806d53;
+
+	cursor: pointer;
+  }
+  
+a {
+	text-decoration: none;
+	color:#a34021	
+}
+
+a:hover{
+	color:#4d1f11
+}
+
+.title
+{
+	font-size: 30px;
 }
 
 p {
-	margin: 5px;
+	margin-bottom: 10px;
+	font-size: 20px;
 }
+
+.reference {
+	text-align: center;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #452121;
+}
+

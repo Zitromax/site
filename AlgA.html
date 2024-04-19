@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A*</title>
     <link rel="stylesheet" href="assets/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="nav">
@@ -21,18 +26,22 @@
 
       <div  class="buttons buttons-A">
 
+        <h2 class="title"> Алгоритм A*</h2>
+
+
         <p>
           <p>Размер поля</p>
-          <input id="numCells" type="number" value="5" name="ttt" />
+          <input id="numCells" class="numCells range" type="range" min="2" max="100" value="5" name="ttt" />
+          <p id="numCellsLabel">5</p>
         </p>
-        
+
           <button id="begin">Установить начало пути</button>
 
           <button id="end">Установить конец пути</button>
 
           <p>Задержка в милисекундах</p>
-          <input id="delay" value="300" type="range" min="0" max="1000" step="100">
-          <p id="printDelay">300</p>
+          <input id="delay" class="range" value="300" type="range" min="0" max="1000" step="100">
+          <p id="delayLabel">300</p>
 
           <button id="start">Найти путь</button>
 
@@ -40,7 +49,7 @@
 
           <button id="maze">Построить лабиринт</button>
 
-          <p id="reference">Установите начало и конец пути</p>
+          <p id="reference" class="reference">Установите начало и конец пути</p>
         
 
       </div>
@@ -54,13 +63,9 @@
 
     </div>
 
-    
-
-    
-
     <script src="/js/A/field.js"></script>
     <script src="/js/algorithms/A.js"></script>
     <script src="/js/algorithms/maze.js"></script>
-    <script src="/js/A/printWay.js"></script>
+
   </body>
 </html>

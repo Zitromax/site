@@ -41,11 +41,12 @@ function chooseBeginOrEnd() {
   referenceLabel.innerHTML = "Установите начало и конец пути";
 }
 
-
-var stopAStart=0;
+var stopAStart = 0;
 
 function reset() {
-  stopAStart=1;
+  referenceLabel.style.backgroundColor = "";
+
+  stopAStart = 1;
   document.querySelector("table").remove();
   beginCoord = new Coord();
   endCoord = new Coord();
@@ -146,9 +147,12 @@ function reset() {
 
 reset();
 
+var numCellsLabel = document.getElementById("numCellsLabel");
+
 var input = document.getElementById("numCells");
 input.addEventListener("input", function () {
   numCells = input.value;
+  numCellsLabel.innerHTML = numCells;
   reset();
 });
 
@@ -156,12 +160,12 @@ var cleanButton = document.getElementById("clean");
 cleanButton.onclick = reset;
 
 var delay = 300;
-var delayText = document.getElementById("printDelay");
+var delayLabel = document.getElementById("delayLabel");
 
 var delayRange = document.getElementById("delay");
 delayRange.addEventListener("input", function () {
   delay = delayRange.value;
-  delayText.innerHTML = delay;
+  delayLabel.innerHTML = delay;
 });
 
 var mazeButton = document.getElementById("maze");
@@ -181,15 +185,15 @@ function disable() {
 
 document.getElementById("start").onclick = function () {
   if (beginWasSet == 1 && endWasSet == 1) {
-    stopAStart=0;
+    stopAStart = 0;
     AStar(numCells, obstacles, beginCoord, endCoord);
     disable();
-  }
-  else
-  {
-    referenceLabel.style.backgroundColor="yellow";
-    setTimeout(function(){
-      referenceLabel.style.backgroundColor="";
-    },2000);
+
+    referenceLabel.style.backgroundColor = "#328dca";
+  } else {
+    referenceLabel.style.backgroundColor = "#b22d2d";
+    setTimeout(function () {
+      referenceLabel.style.backgroundColor = "";
+    }, 2000);
   }
 };

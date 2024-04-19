@@ -205,8 +205,10 @@ function GeneticForWithDelay(
       enable();
       if (stopGenetic == 1) {
         referenceLabel.innerHTML = "Поиск остановлен";
+        referenceLabel.style.backgroundColor="#b22d2d";
       } else {
         referenceLabel.innerHTML = "Поиск закончен";
+        referenceLabel.style.backgroundColor="#279f25";
       }
     }
   }, delay);

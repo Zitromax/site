@@ -43,7 +43,9 @@ function enable()
   cleanButton.disabled = false;
   delayRange.disabled = false;
   mazeButton.disabled = false;
-  referenceLabel.innerHTML="Поиск пути закончен";
+
+  
+  referenceLabel.style.backgroundColor="#279f25";
 }
 
 function AStarWhileWithDelay(
@@ -93,6 +95,8 @@ function AStarWhileWithDelay(
             ).style.backgroundColor = "green";
             point = point.parentPoint;
           }
+          referenceLabel.style.backgroundColor="#279f25";
+          referenceLabel.innerHTML="Поиск пути закончен";
           return enable();
         }
         visited[MinLengthPoint.coord.x][MinLengthPoint.coord.y] = 1;
@@ -178,7 +182,8 @@ function AStarWhileWithDelay(
     else
     {
       enable();
-      referenceLabel.innerHTML="Путь не найден, установите новые начало и конец пути";
+      referenceLabel.style.backgroundColor = "#b22d2d";
+      referenceLabel.innerHTML="Путь не найден, измените поле";
     }
   }, delay);
 }

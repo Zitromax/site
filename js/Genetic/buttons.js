@@ -12,6 +12,8 @@ var stopGenetic = 0;
 document.getElementById("clean").onclick = function () {
   stopGenetic = 1;
   clearCanvasAndPoints();
+
+  referenceLabel.style.backgroundColor="";
   referenceLabel.innerHTML = "Поставьте точки";
 };
 
@@ -19,6 +21,9 @@ var eraseWayButton = document.getElementById("eraseWay");
 eraseWayButton.onclick = function () {
   clearCanvas();
   drawPoints(points);
+
+  referenceLabel.innerHTML = "Можно начать поиск";
+  referenceLabel.style.backgroundColor="";
 };
 
 var populationSize = 10,
@@ -72,11 +77,12 @@ startButton.onclick = function () {
 
     genetic(points, populationSize, generationsNumber, mutationChance, delay);
 
-    referenceLabel.innerHTML = "Идет поиск";
-
     disable();
+
+    referenceLabel.innerHTML = "Идет поиск";
+    referenceLabel.style.backgroundColor="#328dca";
   } else {
-    referenceLabel.style.backgroundColor = "yellow";
+    referenceLabel.style.backgroundColor = "#b22d2d";
 
     setTimeout(function () {
       referenceLabel.style.backgroundColor = "";
