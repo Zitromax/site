@@ -10,38 +10,45 @@
     <nav class="nav">
       <ul class="nav-list">
         <li><a href="index.html">Главная</a></li>
-        <!--
-      -->
+
         <li><a href="AlgA.html">Алгоритм А*</a></li>
-        <!--
-      -->
-        <li><a href="AlgGen.html">Генетический алгоритм</a></li>
+        
+        <li><a href="AlgGenetic.html">Генетический алгоритм</a></li>
       </ul>
     </nav>
 
-    <div class="columns-2">
+    <div class="container">
 
-      <div class="cols">
+      <div  class="buttons buttons-A">
 
+        <p>
           <p>Размер поля</p>
           <input id="numCells" type="number" value="5" name="ttt" />
+        </p>
+        
           <button id="begin">Установить начало пути</button>
+
           <button id="end">Установить конец пути</button>
+
           <p>Задержка в милисекундах</p>
           <input id="delay" value="300" type="range" min="0" max="1000" step="100">
           <p id="printDelay">300</p>
+
           <button id="start">Найти путь</button>
+
           <button id="clean">Отчистить поле</button>
+
           <button id="maze">Построить лабиринт</button>
+
           <p id="reference">Установите начало и конец пути</p>
         
 
       </div>
 
 
-      <div class="cols">
+      <div class="column">
 
-        <table></table>
+        <table ></table>
 
       </div>
 

@@ -82,7 +82,7 @@ nav ul li{
 
 
 .columns-2 {
-	margin-top: 10%;
+	margin-top: 3%;
 	display: flex;
 	
   }
@@ -106,4 +106,45 @@ nav ul li{
 .col-1 {
 
 	margin-right: -200px;
+}
+
+
+.container
+{
+	margin-top: 5%;
+} 
+
+  table {
+	float: right;
+	margin-right: 13%;
+  }
+  
+
+  .canvas {
+	width: 500px;
+	height: 500px;
+	border: 6px solid #000000;
+  }
+  canvas {
+	width: 99.4%;
+	height:99.4% ;
+  }
+  
+
+img {
+	width: 500px;
+}
+
+
+.buttons-A {
+	float: left;
+	margin-left: 18%;
+} 
+
+button {
+	margin: 5px;
+}
+
+p {
+	margin: 5px;
 }

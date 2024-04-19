@@ -189,7 +189,7 @@ document.getElementById("start").onclick = function () {
   {
     referenceLabel.style.backgroundColor="yellow";
     setTimeout(function(){
-      referenceLabel.style.backgroundColor="#7fc3ff";
+      referenceLabel.style.backgroundColor="";
     },2000);
   }
 };
