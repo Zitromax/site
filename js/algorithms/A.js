@@ -95,6 +95,7 @@ function AStarWhileWithDelay(
             ).style.backgroundColor = "green";
             point = point.parentPoint;
           }
+          
           referenceLabel.style.backgroundColor="#279f25";
           referenceLabel.innerHTML="Поиск пути закончен";
           return enable();
